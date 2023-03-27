@@ -1,10 +1,10 @@
 import numpy as np
 import nltk
-# nltk.download('punkt')
+
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 
-
+# Define a function to tokenize a sentence
 def tokenize(sentence):
     """
     split sentence into array of words/tokens
@@ -12,7 +12,7 @@ def tokenize(sentence):
     """
     return nltk.word_tokenize(sentence)
 
-
+# Define a function to stem a word
 def stem(word):
     """
     stemming = find the root form of the word
@@ -23,7 +23,7 @@ def stem(word):
     """
     return stemmer.stem(word.lower())
 
-
+# Define a function to convert a sentence into a bag of words representation
 def bag_of_words(tokenized_sentence, words):
     """
     return bag of words array:
@@ -33,12 +33,19 @@ def bag_of_words(tokenized_sentence, words):
     words = ["hi", "hello", "I", "you", "bye", "thank", "cool"]
     bog   = [  0 ,    1 ,    0 ,   1 ,    0 ,    0 ,      0]
     """
-    # stem each word
+ 
+    # Stem all the words in the sentence
     sentence_words = [stem(word) for word in tokenized_sentence]
-    # initialize bag with 0 for each word
+
+    # Create an array of zeros with length equal to the number of words in the vocabulary
     bag = np.zeros(len(words), dtype=np.float32)
+    
+    # Iterate through each word in the vocabulary
     for idx, w in enumerate(words):
+        # If the word exists in the sentence, set the corresponding value in the bag to 1
         if w in sentence_words: 
             bag[idx] = 1
 
     return bag
+
+
