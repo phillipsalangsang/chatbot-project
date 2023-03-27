@@ -87,4 +87,7 @@ class Chatbox {
         chatmessage.innerHTML = html;
     }
 
-}    
+} 
+
+const chatbox = new Chatbox();
+chatbox.display();
