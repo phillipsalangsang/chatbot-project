@@ -38,8 +38,8 @@
           "What do you do?"
         ],
         "responses": [
-          "We provide Health and Fitness services",
-          "Would you like to speak to one of our personal trainers?"
+          "We provide tutoring services for Maths, English and Science",
+          "We offer services at GCSE and A level tutoring"
         ]
       },
       {
@@ -48,21 +48,21 @@
           "Do you take card?",
           "Do you accept installments?",
           "Can I pay with Paypal?",
-          "Are you cash only?"
+          "How do you take payment?"
         ],
         "responses": [
-          "We accept all form of card payments",
-          "Installments vary from trainer to trainer"
+          "We accept all form of card payments"
+        
         ]
       },
       {
         "tag": "duration",
         "patterns": [
-          "How long does coaching last?",
+          "How long does a session last?",
           "Can I get a trial?"
         ],
         "responses": [
-          "Coaching lasts depending on the package and agreement with our trainers",
+          "Tutoring lasts 1 hour a session. Although we offer longer sessions at a different rate.",
           "Sure! We currently have a trial on offer"
         ]
       }

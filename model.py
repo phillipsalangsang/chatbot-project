@@ -24,3 +24,5 @@ class NeuralNet(nn.Module):
         out = self.l3(out)  # Apply the third linear layer to the output of the second layer
 
         return out  # Return the final output of the third linear layer
+    
+# pytorch model simple nerual network 

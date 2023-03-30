@@ -127,3 +127,5 @@ FILE = "data.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')
+
+# pytorch training loop which dumps data to a data.pth file allowing the bot to be trained
